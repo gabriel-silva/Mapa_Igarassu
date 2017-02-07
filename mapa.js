@@ -3,7 +3,7 @@ function mapIgarassu() {
 	var mapaIgarassu = new google.maps.Map(document.getElementById("googleMap"), {
 		zoom:16,
 		center: new google.maps.LatLng(-7.834195, -34.906142), 
-		mapTypeId: google.maps.MapTypeId.HYBR
+		mapTypeId: google.maps.MapTypeId.HYBRID
 
 	});
 
@@ -57,6 +57,7 @@ function mapIgarassu() {
 		})(marker, i)); //Chamada da Função
 	}
 
+var info2 = new google.maps.InfoWindow({map:mapaIgarassu});
 	if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -65,16 +66,16 @@ function mapIgarassu() {
             };
 
             info2.setPosition(pos);
-            infoWindow.setContent('Você está aqui.');
+            info2.setContent('Você está aqui.');
             mapaIgarassu.setCenter(pos);
           }, function() {
-            handleLocationError(true, info2, map.getCenter());
+            handleLocationError(true, info2, mapaIgarassu.getCenter());
           });
         } 
         else {
           // Browser doesn't support Geolocation
-          handleLocationError(false, info2, map.getCenter());
-        }
+          handleLocationError(false, info2, mapaIgarassu.getCenter());
+        
       }
 
       function handleLocationError(browserHasGeolocation, info2, pos) {
@@ -83,3 +84,4 @@ function mapIgarassu() {
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
+  }
