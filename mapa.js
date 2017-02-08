@@ -3,7 +3,7 @@ function mapIgarassu() {
 	var mapaIgarassu = new google.maps.Map(document.getElementById("googleMap"), {
 		zoom:16,
 		center: new google.maps.LatLng(-7.834195, -34.906142), 
-		mapTypeId: google.maps.MapTypeId.HYBRID
+		mapTypeId: google.maps.MapTypeId.TERRAIN
 
 	});
 
@@ -11,10 +11,10 @@ function mapIgarassu() {
 	var locations = [
  		//arrays
  		['Igreja e Convento Franciscanos de Santo Antônio', -7.832511, -34.905131], //1									[OK]
- 		//['Secretária de Turismo', -7.834078, -34.906410],	//2
+ 		['Secretária de Turismo',-7.8337595,-34.9054833],	//2															[OK]
  		['Empresa de Urbanização de Igarassu(URBI)', -7.834452, -34.905451],	//3										[OK]
  		['Câmara Municipal', -7.835233, -34.906164],	//4																[OK]
- 		//['Ruínas da Igreja da Misericórdia', -7.834078, -34.906410],	//5
+ 		['Ruínas da Igreja da Misericórdia',-7.8358037,-34.9073714],//5													[OK]
  		['Casa do Artesão', -7.834902, -34.906872],	//6																	[OK]
  		['Casa do Patrimônio em Igarassu/Iphan(Sobrado do Imperador)', -7.834733, -34.906740],	//7						[OK]
  		['Recolhimento e Igreja do Sagrado Coração de Jesus', -7.834387, -34.906491],	//8								[OK]
@@ -29,7 +29,7 @@ function mapIgarassu() {
  		['Igreja de Nossa Senhora do Livramento', -7.833169, -34.906673],	//17										[OK]									
  		['Centro de Artes e Cultura', -7.832004, -34.908098],	//18													[OK]
  		['Igreja de São Sebastião', -7.831667, -34.908622],	//19														[OK]
- 		//['Secretária de Obras', -7.834078, -34.906410],	//20
+ 		['Secretária de Obras', -7.8316536,-34.9091987],//20															[OK]
  		];
 
  	var janelaInfo = new google.maps.InfoWindow();
