@@ -1,12 +1,26 @@
-body{
-	margin: 0;
-	padding: 0;	
+/*
+.barraDireita{
+	margin-top: -1000px;
+	background-color: #963F0A;
+	height: 1000px;
+	width: 491px;
+	margin-left: 1395px;
+}
+.barraEsquerda{
+	background-color: #963F0A;
+	height: 1000px;
+	width: 500px;
+}
+*/
+.map{
+	width: 400px;
+	margin: -1000px;
+ 	margin-left: 500px;
 }
 
 #googleMap{
-	margin: auto;
-	top: 50px;
-	width:900px;
-	height:500px;
- 	border: 2px solid black;
+	/*border: 1px solid black;
+	*/
+	width:894px;
+	height:998px;
  }
