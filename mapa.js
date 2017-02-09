@@ -7,8 +7,11 @@ function mapIgarassu() {
 
 	});
 
+	var list = $("#links-list");
+
 	//array dos locais
 	var locations = [
+ 		
  		//arrays
  		['Igreja e Convento Franciscanos de Santo Antônio', -7.832511, -34.905131], //1									[OK]
  		['Secretária de Turismo',-7.8337595,-34.9054833],	//2															[OK]
@@ -30,33 +33,47 @@ function mapIgarassu() {
  		['Centro de Artes e Cultura', -7.832004, -34.908098],	//18													[OK]
  		['Igreja de São Sebastião', -7.831667, -34.908622],	//19														[OK]
  		['Secretária de Obras', -7.8316536,-34.9091987],//20															[OK]
+ 		
  		];
 
  	var janelaInfo = new google.maps.InfoWindow();
 
-	//marcacão de todos os locais
-	for (i = 0; i < locations.length; i++) {  
+	
+	for (i = 0; i < locations.length; i++){ //marcacão de todos os locais
+		var a_id = "location-" + i;
+		var li = "<li><a class=\"link\" id=\"" + a_id + "\" href=\"#\">" + locations[i][0] + "</a></li>";
+		list.append(li);
+
 		 var marker = new google.maps.Marker({
   			title: locations[i][0], //titulo do local
 			position: new google.maps.LatLng(locations[i][1], locations[i][2]), //posição do local
     		map: mapaIgarassu //chamada da variavel mapaIgarassu
     	});
 
-		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		var fn = function(_marker, _i) {
 			return function(){
 				
 				//pop up
-				janelaInfo.setContent(locations[i][0]); 
-				janelaInfo.open(mapaIgarassu, marker);		
+				janelaInfo.setContent(locations[_i][0]); 
+				janelaInfo.open(mapaIgarassu, _marker);		
 				
 				//zoom para o marcador 
 				mapaIgarassu.setZoom(20);
-				mapaIgarassu.setCenter(marker.getPosition());
+				mapaIgarassu.setCenter(_marker.getPosition());
 			
 			}
-		})(marker, i)); //Chamada da Função
+		};
+
+		google.maps.event.addListener(marker, 'click', fn(marker, i)); 
+
+		$('#' + a_id).on("click", (function(_marker) {
+			return function() {
+				google.maps.event.trigger(_marker, 'click');			
+			}
+		})(marker));
 	}
 
+/*
 var info2 = new google.maps.InfoWindow({map:mapaIgarassu});
 	if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -84,4 +101,6 @@ var info2 = new google.maps.InfoWindow({map:mapaIgarassu});
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
+      */
+ 
   }
