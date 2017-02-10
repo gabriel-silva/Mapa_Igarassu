@@ -7,7 +7,7 @@ function mapIgarassu() {
 
 	});
 
-	//var list = $("#links-list");
+	var list = $("#links-list");
 
 	//array dos locais
 	var locations = [
@@ -42,9 +42,9 @@ function mapIgarassu() {
 	for (i = 0; i < locations.length; i++){ //marcacão de todos os locais
 		
 		
-		//var a_id = "location-" + i;
-		//var li = "<li><a class=\"link\" id=\"" + a_id + "\" href=\"#\">" + locations[i][0] + "</a></li>";
-		//list.append(li);
+		var a_id = "location-" + i;
+		var li = "<li><a class=\"link\" id=\"" + a_id + "\" href=\"#\">" + locations[i][0] + "</a></li>";
+		list.append(li);
 	
 		 var marker = new google.maps.Marker({
   			title: locations[i][0], //titulo do local
@@ -68,13 +68,12 @@ function mapIgarassu() {
 
 		google.maps.event.addListener(marker, 'click', fn(marker, i)); 
 
-		/*
+		
 		$('#' + a_id).on("click", (function(_marker) {
 			return function() {
 				google.maps.event.trigger(_marker, 'click');			
 			}
 		})(marker));
-	*/
 		
 	}
 

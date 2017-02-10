@@ -3,12 +3,13 @@
 }
 
 .barraDireita{
-	border: 1px solid black;	
+	border: 1px solid black;
 	margin: auto;
-	width: 198px;
-	height: 400px;
-	margin-right: 0px;
-	margin-bottom: -402px;
+	width: 200px;
+	height: 500px;
+	margin-bottom: 0px;
+	margin-left: 1602px;
+	margin-top: 0px;
 }
 .barraEsquerda{
 	border: 1px solid black;	
@@ -16,24 +17,33 @@
 	width: 348px;
 	height: 400px;
 	margin-left: 0;
-	margin-bottom: -402px;
+	margin-bottom: -401px;
+}
+
+a{
+	color: white;
+	font-family: arial;
+	font-size: 13px;
 }
 
 #links-list{
 	margin-top: auto;
 	color: white;
-	font-family: arial;
-	font-size: 15px;
 }
 .map{
-	width: 400px;
+	border: 1px solid black;
+	margin-top:702px;
 	margin: auto;
- 	margin-left: 350px;
+	margin-left: 350px;
+	width: 700px;
+	height: 700px;
 }
 
 #googleMap{
 	/*border: 1px solid black;
-	*/
-	width:800px;
-	height:632px;
+	
+	margin-top:-703px;
+	width:1360px;
+	height:955px;
+ 	*/
  }
