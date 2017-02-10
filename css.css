@@ -1,31 +1,56 @@
 body{
-	background-color: #AB600F;
+	background-color: #4F2C07;
 }
 .principal{
-	background-color: #AB600F;
-	border: 1px solid black;
+	background-color: #4F2C07;
 	margin: relative;
 	width:100%;
 	height:950px;
 
 }
-
-
 .barraEsquerda{
-	border: 1px solid black;
-	margin: auto;
-	width: 348px;
+	margin: -948px;
+	width: 350px;
 	height: 400px;
 	margin-left: 0px;
-	margin-bottom: -402px;
+	margin-bottom: 548px;
 }
 .barraDireita{
-	border: 1px solid black;
-	margin: auto;
+	margin: -948px;
 	width: 217px;
 	height: 520px;
-	margin-left: 1685px;
-	margin-bottom: -522px;
+	margin-left: 1682px;
+	margin-bottom: 428px;
+}
+.reserva{
+	width: 845px;
+	height: 495px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 44px;
+	margin: -495px;
+	padding-top: -10px;
+	padding-bottom: 0px;
+	position: relative;
+}	
+#rev{
+ 	color:white;
+ 	font-size: 72px;
+ 	transform: rotate(-90deg);
+ 	margin-top: 0px;
+ 	margin-bottom: 0px;
+ 	margin-left: 382px;
+ 	margin-right: -169px;
+}
+#iga{
+	color:white;
+	transform: rotate(-90deg);
+	font-size: 100px;
+	margin-left: 600px;
+	margin-top: 123px;
+	margin-right: -63px;
+	margin-bottom: -300px;
+	font-family: segoe Print;
 }
 a{
 	color: white;
@@ -39,18 +64,15 @@ a{
 }
 
 .map{
-	border: 1px solid black;
+	
 	margin: 0px;
 	margin-left: 350px;
 	width: 1333px;
 	height: 948px;
 }
 
-
-
 #googleMap{
 	
-	border: 1px solid black;
 	margin-top: -1px;
 	width: 1332px;
 	height: 948px;
