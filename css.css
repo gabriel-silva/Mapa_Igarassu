@@ -1,26 +1,39 @@
-/*
-.barraDireita{
-	margin-top: -1000px;
+.principal{
 	background-color: #963F0A;
-	height: 1000px;
-	width: 491px;
-	margin-left: 1395px;
+}
+
+.barraDireita{
+	border: 1px solid black;	
+	margin: auto;
+	width: 198px;
+	height: 400px;
+	margin-right: 0px;
+	margin-bottom: -402px;
 }
 .barraEsquerda{
-	background-color: #963F0A;
-	height: 1000px;
-	width: 500px;
+	border: 1px solid black;	
+	margin: auto;
+	width: 348px;
+	height: 400px;
+	margin-left: 0;
+	margin-bottom: -402px;
 }
-*/
+
+#links-list{
+	margin-top: auto;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+}
 .map{
 	width: 400px;
-	margin: -1000px;
- 	margin-left: 500px;
+	margin: auto;
+ 	margin-left: 350px;
 }
 
 #googleMap{
 	/*border: 1px solid black;
 	*/
-	width:894px;
-	height:998px;
+	width:800px;
+	height:632px;
  }
